@@ -14,6 +14,7 @@ const MODES = {
   short: { msg: 'Time for a break!', color: '#397097' }, 
   long:  { msg: 'Time for a break!', color: '#397a5e' }, 
 };
+
 let state = {
   mode:      'pomo',
   remaining: 25 * 60, 
