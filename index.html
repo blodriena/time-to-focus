@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time to focus!</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ 
+<nav class="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" id="btnReport">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      </svg>
+      <span>Report</span>
+    </button>
+    <button class="nav-btn" id="btnSetting">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+      <span>Setting</span>
+    </button>
+    <button class="nav-btn" id="btnSignIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>Sign In</span>
+    </button>
+    <div class="nav-dots-wrap">
+      <div class="nav-icon-btn" id="btnDots" title="More">⋮</div>
+      <div class="dots-menu" id="dotsMenu">
+        <button class="dots-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Send Feedback
+        </button>
+        <button class="dots-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          About Pomofocus
+        </button>
+        <div class="dots-menu-divider"></div>
+        <button class="dots-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Full Report
+        </button>
+        <button class="dots-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"/></svg>
+          Announcements
+        </button>
+        <div class="dots-menu-divider"></div>
+        <button class="dots-menu-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Download App
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+ <div class="card">
+  <div class="tabs">
+    <button class="tab-btn active" data-mode="pomo">Pomodoro</button>
+    <button class="tab-btn" data-mode="short">Short Break</button>
+    <button class="tab-btn" data-mode="long">Long Break</button>
+  </div>
+  <div class="timer" id="timerDisplay">25:00</div>
+  <div class="controls">
+    <button class="btn-start" id="btnStart">START</button>
+    <button class="btn-skip" id="btnSkip">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <polygon points="5,3 18,12 5,21"/><rect x="19" y="3" width="2.5" height="18" rx="1"/>
+      </svg>
+    </button>
+  </div>
+</div>
+ 
+<div class="subtitle">
+  <div class="subtitle-round" id="roundLabel">#1</div>
+  <div class="subtitle-msg"   id="msgLabel">Time to focus!</div>
+</div>
+ 
+<div class="tasks-wrap">
+  <div class="tasks-head">
+    <span class="tasks-title">Tasks</span>
+    <div class="tasks-menu-wrap">
+      <button class="tasks-menu-btn" id="tasksMenuBtn">⋮</button>
+      <div class="tasks-dropdown" id="tasksDropdown">
+        <div class="tasks-dropdown-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Finish All Pomodoros
+        </div>
+        <div class="tasks-dropdown-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          Clear Finished Tasks
+        </div>
+        <div class="tasks-dropdown-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          Clear All Tasks
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="task-list" id="taskList"></div>
+ 
+  <button class="btn-add-task" id="btnAddTask">
+    <span style="font-size:1.3rem;line-height:1">+</span> Add Task
+  </button>
+</div>
+ <footer>
+  <div class="footer-links">
+    <a href="#">Home</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a>
+  </div>
+  Made with ❤️ by Pomofocus
+</footer>
+ 
+<div class="overlay" id="reportOverlay">
+  <div class="modal" style="max-width:500px">
+    <div class="modal-head">
+      <span class="modal-title">Report</span>
+      <button class="modal-close" data-close="reportOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="report-tabs">
+        <button class="report-tab active">Daily</button>
+        <button class="report-tab">Weekly</button>
+        <button class="report-tab">Monthly</button>
+      </div>
+      <div class="report-stat-row">
+        <div class="report-stat"><div class="num" id="rPomos">0</div><div class="lbl">Pomodoros</div></div>
+        <div class="report-stat"><div class="num" id="rFocus">0h 0m</div><div class="lbl">Focus Time</div></div>
+        <div class="report-stat"><div class="num" id="rTasks">0</div><div class="lbl">Tasks Done</div></div>
+      </div>
+      <div class="report-bar-area" id="reportBars">
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="overlay" id="settingOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="modal-title">Setting</span>
+      <button class="modal-close" data-close="settingOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+ 
+      <div class="setting-section">
+        <div class="setting-label">Timer (minutes)</div>
+        <div class="time-inputs">
+          <div class="time-field">
+            <label>Pomodoro</label>
+            <input type="number" id="setPomo" value="25" min="1" max="99">
+          </div>
+          <div class="time-field">
+            <label>Short Break</label>
+            <input type="number" id="setShort" value="5" min="1" max="99">
+          </div>
+          <div class="time-field">
+            <label>Long Break</label>
+            <input type="number" id="setLong" value="15" min="1" max="99">
+          </div>
+        </div>
+      </div>
+ 
+      <div class="setting-section">
+        <div class="setting-label">Color Themes</div>
+        <div class="color-row" id="colorRow">
+        </div>
+      </div>
+ 
+    </div>
+    <div class="setting-footer">
+      <button class="btn-ok" id="btnSettingOk">OK</button>
+    </div>
+  </div>
+</div>
+ 
+<div class="overlay" id="signOverlay">
+  <div class="modal" style="max-width:400px">
+    <div class="modal-head">
+      <span class="modal-title">Sign Up</span>
+      <button class="modal-close" data-close="signOverlay">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="signup-logo">
+        <div class="signup-logo-icon"></div>
+        <h2>Pomofocus</h2>
+        <p>Create an account to save your tasks and reports</p>
+      </div>
+ 
+      <button class="btn-google">
+        <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
+        Continue with Google
+      </button>
+ 
+      <div class="signup-divider">or</div>
+ 
+      <div class="signup-field">
+        <label>Email</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="signup-field">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••">
+      </div>
+      <button class="btn-signup">Sign Up</button>
+ 
+      <div class="signup-footer-text">
+        Already have an account? <a href="#">Sign In</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="sctipt.js"></script>
+</body>
+</html>
