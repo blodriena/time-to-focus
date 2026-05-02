@@ -31,6 +31,8 @@ let tasks = [
   { id: 3, name: 'Team standup notes',      est: 1, done: true,  pomos: 1, selected: false },
 ];
  
+
+
 const timerEl    = document.getElementById('timerDisplay');
 const btnStart   = document.getElementById('btnStart');
 const btnSkip    = document.getElementById('btnSkip');
