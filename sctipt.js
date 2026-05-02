@@ -30,8 +30,6 @@ let tasks = [
   { id: 2, name: 'Write unit tests',        est: 2, done: false, pomos: 0, selected: false },
   { id: 3, name: 'Team standup notes',      est: 1, done: true,  pomos: 1, selected: false },
 ];
- 
-
 
 const timerEl    = document.getElementById('timerDisplay');
 const btnStart   = document.getElementById('btnStart');
