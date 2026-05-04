@@ -28,9 +28,6 @@ let state = {
 
 
 
-
-
-
 let tasks = [
   { id: 1, name: 'Design new landing page', est: 4, done: false, pomos: 0, selected: true  },
   { id: 2, name: 'Write unit tests',        est: 2, done: false, pomos: 0, selected: false },
